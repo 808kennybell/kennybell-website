@@ -371,42 +371,44 @@ footer { background: #09090b; color: white; }
   }
 }
 
-/* Exact approved first-screen design */
-.premium-home-screen {
+/* Verified approved homepage replacement */
+.approved-home {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  background: #05070a;
+  background: #030508;
   overflow: hidden;
+  line-height: 0;
 }
-.premium-home-screen > img {
+.approved-home-image {
   display: block;
   width: 100%;
-  min-height: 100vh;
+  height: auto;
+  min-height: min(100vh, 900px);
   object-fit: cover;
   object-position: center top;
 }
-.premium-hotspot {
+.approved-hotspot {
   position: absolute;
-  z-index: 3;
   display: block;
+  z-index: 5;
 }
-.premium-book {
-  left: 34%;
-  top: 74%;
-  width: 18%;
-  height: 7%;
-}
-.premium-services {
-  left: 53%;
-  top: 74%;
-  width: 17%;
-  height: 7%;
-}
-@media (max-width: 900px) {
-  .premium-home-screen { min-height: auto; }
-  .premium-home-screen > img {
-    min-height: auto;
-    object-fit: contain;
+.approved-home-link { left: 30.5%; top: 2.1%; width: 5.5%; height: 5%; }
+.approved-services-link { left: 35.5%; top: 2.1%; width: 6.2%; height: 5%; }
+.approved-packages-link { left: 42.2%; top: 2.1%; width: 6.5%; height: 5%; }
+.approved-about-link { left: 54.5%; top: 2.1%; width: 7.5%; height: 5%; }
+.approved-contact-link { left: 62%; top: 2.1%; width: 6.5%; height: 5%; }
+.approved-quote-link { left: 33%; top: 75.2%; width: 16%; height: 6.5%; }
+.approved-view-services-link { left: 51%; top: 75.2%; width: 15%; height: 6.5%; }
+@media (max-width: 760px) {
+  .approved-home { min-height: 100svh; }
+  .approved-home-image {
+    width: auto;
+    max-width: none;
+    height: 100svh;
+    min-height: 100svh;
+    object-fit: cover;
+    object-position: 50% top;
+    transform: translateX(calc((100vw - 100%) / 2));
   }
+  .approved-hotspot { display: none; }
 }
