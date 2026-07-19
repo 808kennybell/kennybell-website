@@ -370,3 +370,58 @@ footer { background: #09090b; color: white; }
     margin: 0 auto 20px;
   }
 }
+
+/* Premium homepage hero — approved design */
+.hero-premium {
+  position: relative;
+  min-height: 0;
+  background: #030507;
+  overflow: hidden;
+}
+.hero-premium::before { display: none; }
+.hero-premium-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero-hotspot {
+  position: absolute;
+  z-index: 3;
+  display: block;
+  border-radius: 8px;
+}
+.hero-hotspot:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+.hero-hotspot-quote {
+  left: 35.2%;
+  top: 68.4%;
+  width: 16.8%;
+  height: 6.3%;
+}
+.hero-hotspot-services {
+  left: 54.8%;
+  top: 68.4%;
+  width: 14.5%;
+  height: 6.3%;
+}
+@media (max-width: 760px) {
+  .hero-premium-image {
+    width: 180%;
+    max-width: none;
+    margin-left: -40%;
+  }
+  .hero-hotspot-quote {
+    left: 23%;
+    top: 68%;
+    width: 31%;
+    height: 6.5%;
+  }
+  .hero-hotspot-services {
+    left: 57%;
+    top: 68%;
+    width: 26%;
+    height: 6.5%;
+  }
+}
