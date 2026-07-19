@@ -371,57 +371,42 @@ footer { background: #09090b; color: white; }
   }
 }
 
-/* Premium homepage hero — approved design */
-.hero-premium {
+/* Exact approved first-screen design */
+.premium-home-screen {
   position: relative;
-  min-height: 0;
-  background: #030507;
+  width: 100%;
+  min-height: 100vh;
+  background: #05070a;
   overflow: hidden;
 }
-.hero-premium::before { display: none; }
-.hero-premium-image {
+.premium-home-screen > img {
   display: block;
   width: 100%;
-  height: auto;
+  min-height: 100vh;
+  object-fit: cover;
+  object-position: center top;
 }
-.hero-hotspot {
+.premium-hotspot {
   position: absolute;
   z-index: 3;
   display: block;
-  border-radius: 8px;
 }
-.hero-hotspot:focus-visible {
-  outline: 3px solid #fff;
-  outline-offset: 3px;
+.premium-book {
+  left: 34%;
+  top: 74%;
+  width: 18%;
+  height: 7%;
 }
-.hero-hotspot-quote {
-  left: 35.2%;
-  top: 68.4%;
-  width: 16.8%;
-  height: 6.3%;
+.premium-services {
+  left: 53%;
+  top: 74%;
+  width: 17%;
+  height: 7%;
 }
-.hero-hotspot-services {
-  left: 54.8%;
-  top: 68.4%;
-  width: 14.5%;
-  height: 6.3%;
-}
-@media (max-width: 760px) {
-  .hero-premium-image {
-    width: 180%;
-    max-width: none;
-    margin-left: -40%;
-  }
-  .hero-hotspot-quote {
-    left: 23%;
-    top: 68%;
-    width: 31%;
-    height: 6.5%;
-  }
-  .hero-hotspot-services {
-    left: 57%;
-    top: 68%;
-    width: 26%;
-    height: 6.5%;
+@media (max-width: 900px) {
+  .premium-home-screen { min-height: auto; }
+  .premium-home-screen > img {
+    min-height: auto;
+    object-fit: contain;
   }
 }
