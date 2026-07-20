@@ -1,106 +1,421 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Patriot Detailing — premium mobile interior detailing in Bavaria. Preview website; appointments are not yet being accepted.">
-  <meta name="theme-color" content="#070707">
-  <title>Patriot Detailing | Premium Mobile Car Detailing</title>
+  <meta name="description" content="Patriot Detailing – mobile Premium-Innenraumaufbereitung, Polieren und Lackpflege im Raum Schwandorf bis Bayreuth. Veteran owned by Hunter Linke and Kenny Bell.">
+  <meta name="theme-color" content="#050505">
+  <meta name="robots" content="index,follow">
+  <meta name="keywords" content="Autoaufbereitung Schwandorf, Fahrzeugaufbereitung Schwandorf, Innenraumreinigung Schwandorf, Auto Detailing Bayreuth, mobile Fahrzeugpflege Bayern">
+  <meta property="og:title" content="Patriot Detailing | Mobile Fahrzeugaufbereitung">
+  <meta property="og:description" content="Premium-Innenraumaufbereitung, Polieren und Lackpflege im Raum Schwandorf bis Bayreuth.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://patriotdetailing.de">
+  <meta property="og:image" content="https://patriotdetailing.de/assets/patriot-detailing-logo.jpeg">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"AutomotiveBusiness",
+    "name":"Patriot Detailing",
+    "url":"https://patriotdetailing.de",
+    "telephone":"+4915129838342",
+    "email":"patriotdetailing@kennybell.de",
+    "address":{"@type":"PostalAddress","streetAddress":"Sommerstraße 31","postalCode":"92421","addressLocality":"Schwandorf","addressCountry":"DE"},
+    "areaServed":["Schwandorf","Bayreuth","Regensburg","Amberg","Weiden in der Oberpfalz"],
+    "founder":[{"@type":"Person","name":"Hunter Linke"},{"@type":"Person","name":"Kenny Bell"}]
+  }
+  </script>
+  <title>Patriot Detailing | Mobile Fahrzeugaufbereitung</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="launch-banner">
-    <strong>Preview — not yet open</strong>
-    <span>We are not booking appointments yet.</span>
+  <div class="loading-screen" id="loading-screen" aria-hidden="true">
+    <img src="assets/patriot-detailing-logo.jpeg" alt="">
+    <span>DETAILING DONE RIGHT.</span>
+  </div>
+  <div class="topbar">
+    <span data-de="Veteranengeführt" data-en="Veteran owned">Veteranengeführt</span>
+    <span data-de="Mobil im Raum Schwandorf–Bayreuth" data-en="Mobile service from Schwandorf to Bayreuth">Mobil im Raum Schwandorf–Bayreuth</span>
+    <a href="#launch-notice" data-de="Start-Hinweis" data-en="Launch notice">Start-Hinweis</a>
   </div>
 
+  <section class="launch-notice" id="launch-notice" aria-label="Start-Hinweis">
+    <strong data-de="Wir starten bald" data-en="Launching soon">Wir starten bald</strong>
+    <span data-de="Wir nehmen derzeit noch keine Termine oder Buchungen an." data-en="We are not accepting appointments or bookings yet.">Wir nehmen derzeit noch keine Termine oder Buchungen an.</span>
+  </section>
+
   <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="Patriot Detailing home">
-      <img src="patriot-detailing-logo.jpeg" alt="Patriot Detailing — Premium Auto Care">
+    <a class="brand" href="#top" aria-label="Patriot Detailing Startseite">
+      <img src="assets/patriot-detailing-logo.jpeg" alt="Patriot Detailing Logo">
     </a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
-    <nav id="main-nav" class="main-nav">
-      <a class="active" href="#top">Home</a>
-      <a href="#services">Services</a>
-      <a href="#packages">Packages</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact</a>
-      <span class="nav-status">Opening soon</span>
+
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
+      <a href="#services" data-de="Leistungen" data-en="Services">Leistungen</a>
+      <a href="#add-ons" data-de="Zusatzleistungen" data-en="Add-ons">Zusatzleistungen</a>
+      <a href="#process" data-de="Ablauf" data-en="How it works">Ablauf</a>
+      <a href="#about" data-de="Über uns" data-en="About">Über uns</a>
+      <a href="#faq">FAQ</a>
+      <button class="language-toggle" id="language-toggle" type="button" aria-label="Sprache wechseln">EN</button>
+      <a class="nav-cta" href="#launch-notice" data-de="Noch nicht buchbar" data-en="Bookings not open">Noch nicht buchbar</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-shade"></div>
-      <div class="hero-content reveal">
-        <img class="hero-logo" src="patriot-detailing-logo.jpeg" alt="Patriot Detailing logo">
-        <h1>Premium detailing<br>at <span>your</span> doorstep</h1>
-        <p>Professional care. Flawless results. Mobile interior detailing built around quality, trust, and attention to every detail.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#services">View services</a>
-          <span class="button button-disabled" aria-disabled="true">We are not booking appointments yet</span>
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-de="Premium-Innenraumaufbereitung" data-en="Premium interior detailing">Premium-Innenraumaufbereitung</p>
+          <h1>
+            <span data-de="Ihr Auto verdient mehr" data-en="Your car deserves more">Ihr Auto verdient mehr</span><br>
+            <em data-de="als nur sauber." data-en="than just a clean.">als nur sauber.</em>
+          </h1>
+          <p class="hero-text" data-de="Wir bringen Ihren Innenraum wieder zum Leben – mit professioneller Ausrüstung, ehrlicher Preisgestaltung und Liebe zum Detail. Mobil bei Ihnen vor Ort." data-en="We bring your interior back to life with professional equipment, honest pricing and attention to every detail. Mobile service at your location.">
+            Wir bringen Ihren Innenraum wieder zum Leben – mit professioneller Ausrüstung, ehrlicher Preisgestaltung und Liebe zum Detail. Mobil bei Ihnen vor Ort.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#launch-notice" data-de="Noch nicht buchbar" data-en="Bookings not open">Noch nicht buchbar</a>
+            <a class="button button-secondary" href="#services" data-de="Pakete ansehen" data-en="View packages">Pakete ansehen</a>
+          </div>
+          <div class="trust-row">
+            <div><strong data-de="Mobil" data-en="Mobile">Mobil</strong><span data-de="Wir kommen zu Ihnen" data-en="We come to you">Wir kommen zu Ihnen</span></div>
+            <div><strong data-de="Veteranengeführt" data-en="Veteran owned">Veteranengeführt</strong><span>Hunter Linke &amp; Kenny Bell</span></div>
+            <div><strong data-de="Detailfokus" data-en="Detail focused">Detailfokus</strong><span data-de="Jede Oberfläche zählt" data-en="Every surface matters">Jede Oberfläche zählt</span></div>
+          </div>
+        </div>
+
+        <div class="hero-card reveal">
+          <img src="assets/hero-interior.jpg?v=20260719-final" alt="Premium-Fahrzeuginnenraum als Konzeptbild">
+          <div class="hero-card-bottom">
+            <span class="status-dot"></span>
+            <span data-de="Wir nehmen derzeit noch keine Termine an" data-en="We are not accepting appointments yet">Wir nehmen derzeit noch keine Termine an</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-strip" aria-label="Leistungsübersicht">
+      <span data-de="Tiefenreinigung" data-en="Deep interior cleaning">Tiefenreinigung</span>
+      <span data-de="Sitz- & Teppichextraktion" data-en="Seat & carpet extraction">Sitz- &amp; Teppichextraktion</span>
+      <span data-de="Lederpflege" data-en="Leather care">Lederpflege</span>
+      <span data-de="Geruchsbehandlung" data-en="Odor treatment">Geruchsbehandlung</span>
+      <span data-de="Polieren & Buffing" data-en="Polishing & buffing">Polieren &amp; Buffing</span>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-de="Unsere Innenraum-Pakete" data-en="Our interior packages">Unsere Innenraum-Pakete</p>
+        <h2 data-de="Detailing done right." data-en="Detailing done right.">Detailing done right.</h2>
+        <p data-de="Endpreise richten sich nach Fahrzeuggröße, Zustand, Verschmutzungsgrad und gewählten Zusatzleistungen." data-en="Final prices depend on vehicle size, condition, level of soiling and selected add-ons.">
+          Endpreise richten sich nach Fahrzeuggröße, Zustand, Verschmutzungsgrad und gewählten Zusatzleistungen.
+        </p>
+      </div>
+
+      <div class="services-grid four">
+        <article class="service-card reveal">
+          <span class="service-number">01</span>
+          <h3 data-de="Basic Interior Refresh" data-en="Basic Interior Refresh">Basic Interior Refresh</h3>
+          <div class="price" data-de="ab 40–60 €" data-en="from €40–60">ab 40–60 €</div><div class="service-meta"><span data-de="ca. 1–1,5 Std." data-en="approx. 1–1.5 hrs">ca. 1–1,5 Std.</span><span data-de="Ideal für regelmäßige Pflege" data-en="Best for regular upkeep">Ideal für regelmäßige Pflege</span></div>
+          <p data-de="Perfekt, um Ihr Fahrzeug frisch und gepflegt zu halten." data-en="Perfect for keeping your vehicle fresh.">Perfekt, um Ihr Fahrzeug frisch und gepflegt zu halten.</p>
+          <ul>
+            <li data-de="Sitze, Teppiche & Kofferraum saugen" data-en="Vacuum seats, carpets & trunk">Sitze, Teppiche &amp; Kofferraum saugen</li>
+            <li data-de="Türverkleidungen reinigen" data-en="Door panel cleaning">Türverkleidungen reinigen</li>
+            <li data-de="Innenfenster reinigen" data-en="Interior window cleaning">Innenfenster reinigen</li>
+            <li data-de="Leichte Staubentfernung" data-en="Light dust removal">Leichte Staubentfernung</li>
+            <li data-de="Schnell • sauber • preiswert" data-en="Fast • clean • affordable">Schnell • sauber • preiswert</li>
+          </ul>
+          <a href="#launch-notice" data-de="Noch nicht buchbar →" data-en="Bookings not open →">Noch nicht buchbar →</a>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-number">02</span>
+          <h3 data-de="Standard Interior Detail" data-en="Standard Interior Detail">Standard Interior Detail</h3>
+          <div class="price" data-de="ab 80–100 €" data-en="from €80–100">ab 80–100 €</div><div class="service-meta"><span data-de="ca. 2–3 Std." data-en="approx. 2–3 hrs">ca. 2–3 Std.</span><span data-de="Ideal für Alltagsfahrzeuge" data-en="Best for daily drivers">Ideal für Alltagsfahrzeuge</span></div>
+          <p data-de="Mehr als eine Reinigung – eine komplette Auffrischung." data-en="More than a clean – a complete refresh.">Mehr als eine Reinigung – eine komplette Auffrischung.</p>
+          <ul>
+            <li data-de="Alles aus Basic" data-en="Everything in Basic">Alles aus Basic</li>
+            <li data-de="Intensives Saugen" data-en="Deep vacuum">Intensives Saugen</li>
+            <li data-de="Teppich-Bürstenreinigung" data-en="Carpet brush agitation">Teppich-Bürstenreinigung</li>
+            <li data-de="Getränkehalter & Lüftungsdüsen" data-en="Cup holders & air vents">Getränkehalter &amp; Lüftungsdüsen</li>
+            <li data-de="Kunststoffpflege & Geruchsneutralisierung" data-en="Plastic trim care & odor neutralizer">Kunststoffpflege &amp; Geruchsneutralisierung</li>
+          </ul>
+          <a href="#launch-notice" data-de="Noch nicht buchbar →" data-en="Bookings not open →">Noch nicht buchbar →</a>
+        </article>
+
+        <article class="service-card featured reveal">
+          <div class="popular" data-de="Am beliebtesten" data-en="Most popular">Am beliebtesten</div>
+          <span class="service-number">03</span>
+          <h3 data-de="Premium Interior Detail" data-en="Premium Interior Detail">Premium Interior Detail</h3>
+          <div class="price" data-de="ab 120–160 €" data-en="from €120–160">ab 120–160 €</div><div class="service-meta"><span data-de="ca. 3–5 Std." data-en="approx. 3–5 hrs">ca. 3–5 Std.</span><span data-de="Ideal für intensive Auffrischung" data-en="Best for a deep refresh">Ideal für intensive Auffrischung</span></div>
+          <p data-de="Stellt das gepflegte Neuwagengefühl wieder her." data-en="Restore that like-new feeling.">Stellt das gepflegte Neuwagengefühl wieder her.</p>
+          <ul>
+            <li data-de="Alles aus Standard" data-en="Everything in Standard">Alles aus Standard</li>
+            <li data-de="Sitz- & Teppichshampoo" data-en="Seat & carpet shampoo">Sitz- &amp; Teppichshampoo</li>
+            <li data-de="Professionelle Fleckenbehandlung" data-en="Professional stain treatment">Professionelle Fleckenbehandlung</li>
+            <li data-de="Punktuelle Dachhimmelreinigung" data-en="Headliner spot cleaning">Punktuelle Dachhimmelreinigung</li>
+            <li data-de="Dampfreinigung & Lederpflege" data-en="Steam cleaning & leather conditioning">Dampfreinigung &amp; Lederpflege</li>
+          </ul>
+          <a href="#launch-notice" data-de="Noch nicht buchbar →" data-en="Bookings not open →">Noch nicht buchbar →</a>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-number">04</span>
+          <h3 data-de="Patriot’s Premium Detail" data-en="Patriot’s Premium Detail">Patriot’s Premium Detail</h3>
+          <div class="price" data-de="ab 180–260 €" data-en="from €180–260">ab 180–260 €</div><div class="service-meta"><span data-de="ca. 5–8 Std." data-en="approx. 5–8 hrs">ca. 5–8 Std.</span><span data-de="Ideal für starke Verschmutzung" data-en="Best for heavy restoration">Ideal für starke Verschmutzung</span></div>
+          <p data-de="Die ultimative Innenraum-Transformation." data-en="The ultimate interior transformation.">Die ultimative Innenraum-Transformation.</p>
+          <ul>
+            <li data-de="Komplette Dampf- & Extraktionsreinigung" data-en="Complete steam & extraction cleaning">Komplette Dampf- &amp; Extraktionsreinigung</li>
+            <li data-de="Tierhaar- & Tiefenfleckenentfernung" data-en="Pet hair & deep stain removal">Tierhaar- &amp; Tiefenfleckenentfernung</li>
+            <li data-de="Leder-Tiefenreinigung & Pflege" data-en="Leather deep clean & conditioning">Leder-Tiefenreinigung &amp; Pflege</li>
+            <li data-de="Detailreinigung aller Ritzen" data-en="Detailed crevice cleaning">Detailreinigung aller Ritzen</li>
+            <li data-de="Komplette Geruchsbehandlung" data-en="Complete odor treatment">Komplette Geruchsbehandlung</li>
+          </ul>
+          <a href="#launch-notice" data-de="Noch nicht buchbar →" data-en="Bookings not open →">Noch nicht buchbar →</a>
+        </article>
+      </div>
+
+      <div class="warning-card reveal">
+        <strong data-de="Achtung:" data-en="Warning:">Achtung:</strong>
+        <span data-de="Ihr Fahrzeug könnte besser aussehen und riechen als am Tag des Kaufs." data-en="Your vehicle may look and smell better than the day you bought it.">Ihr Fahrzeug könnte besser aussehen und riechen als am Tag des Kaufs.</span>
+      </div>
+    </section>
+
+    <section class="section add-ons" id="add-ons">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-de="Zusatzleistungen" data-en="Add-on services">Zusatzleistungen</p>
+        <h2 data-de="Mehr Pflege. Mehr Glanz. Mehr Schutz." data-en="More care. More gloss. More protection.">Mehr Pflege. Mehr Glanz. Mehr Schutz.</h2>
+      </div>
+      <div class="addon-grid">
+        <article class="addon-card reveal"><img class="addon-photo" src="assets/pet-hair.jpg?v=20260719-final" alt=""><h3 data-de="Tierhaarentfernung" data-en="Pet hair removal">Tierhaarentfernung</h3><p data-de="Intensive Entfernung eingebetteter Tierhaare aus Stoff, Teppich und Ritzen." data-en="Intensive removal of embedded pet hair from fabric, carpet and crevices.">Intensive Entfernung eingebetteter Tierhaare aus Stoff, Teppich und Ritzen.</p></article>
+        <article class="addon-card reveal"><img class="addon-photo" src="assets/odor-treatment.jpg?v=20260719-final" alt=""><h3 data-de="Geruchsbehandlung" data-en="Odor treatment">Geruchsbehandlung</h3><p data-de="Gezielte Neutralisierung von Tier-, Rauch- und Alltagsgerüchen." data-en="Targeted neutralization of pet, smoke and everyday odors.">Gezielte Neutralisierung von Tier-, Rauch- und Alltagsgerüchen.</p></article>
+        <article class="addon-card reveal"><h3 data-de="Scheinwerfer-Aufbereitung" data-en="Headlight restoration">Scheinwerfer-Aufbereitung</h3><p data-de="Aufbereitung matter oder vergilbter Scheinwerfer für bessere Optik und Sicht." data-en="Restoration of cloudy or yellowed headlights for improved appearance and visibility.">Aufbereitung matter oder vergilbter Scheinwerfer für bessere Optik und Sicht.</p></article>
+        <article class="addon-card reveal"><h3 data-de="Lackpolitur & Buffing" data-en="Paint polishing & buffing">Lackpolitur &amp; Buffing</h3><p data-de="Glanzsteigerung und Reduzierung leichter Waschkratzer – nach Lackprüfung und nur an geeigneten Standorten." data-en="Gloss enhancement and reduction of light wash marks after paint inspection and only at suitable locations.">Glanzsteigerung und Reduzierung leichter Waschkratzer – nach Lackprüfung und nur an geeigneten Standorten.</p></article>
+        <article class="addon-card reveal"><h3 data-de="Lackschutz" data-en="Paint protection">Lackschutz</h3><p data-de="Versiegelung nach Politur, um Glanz und Schutz länger zu erhalten." data-en="Protective sealant after polishing to preserve gloss and protection longer.">Versiegelung nach Politur, um Glanz und Schutz länger zu erhalten.</p></article>
+        <article class="addon-card reveal"><h3 data-de="Verkaufsaufbereitung" data-en="Pre-sale preparation">Verkaufsaufbereitung</h3><p data-de="Gezielte Innenraum- und Präsentationsaufbereitung vor Verkauf oder Leasingrückgabe." data-en="Focused interior and presentation preparation before sale or lease return.">Gezielte Innenraum- und Präsentationsaufbereitung vor Verkauf oder Leasingrückgabe.</p></article>
+      </div>
+      <div class="legal-service-note reveal">
+        <strong data-de="Hinweis zu Außenarbeiten:" data-en="Exterior-service note:">Hinweis zu Außenarbeiten:</strong>
+        <span data-de="Mobile Außenwäsche, Politur und Lackpflege erfolgen nur dort, wo Abwasser, Untergrund und örtliche Vorschriften dies erlauben, oder an einem genehmigten Waschplatz." data-en="Mobile exterior washing, polishing and paint care are performed only where wastewater handling, surface conditions and local rules allow, or at an approved wash site.">Mobile Außenwäsche, Politur und Lackpflege erfolgen nur dort, wo Abwasser, Untergrund und örtliche Vorschriften dies erlauben, oder an einem genehmigten Waschplatz.</span>
+      </div>
+    </section>
+
+    <section class="visual-section reverse">
+      <div>
+        <p class="eyebrow" data-de="Lackpflege" data-en="Paint correction">Lackpflege</p>
+        <h2 data-de="Polieren und Buffing für sichtbar mehr Tiefe und Glanz." data-en="Polishing and buffing for visibly greater depth and gloss.">Polieren und Buffing für sichtbar mehr Tiefe und Glanz.</h2>
+      </div>
+      <img src="assets/polishing.jpg?v=20260719-final" alt="Konzeptdarstellung einer Fahrzeugpolitur">
+    </section>
+
+
+    <section class="section premium-services" id="premium-services">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-de="Weitere Premium-Leistungen" data-en="More premium services">Weitere Premium-Leistungen</p>
+        <h2 data-de="Gezielte Pflege für besondere Anforderungen." data-en="Focused care for special needs.">Gezielte Pflege für besondere Anforderungen.</h2>
+      </div>
+      <div class="premium-service-grid">
+        <article class="mini-service reveal"><img class="mini-service-photo" src="assets/one-step-polish.jpg?v=20260719-individual" alt="Glänzend poliertes schwarzes Fahrzeug"><span>✦</span><h3 data-de="One-Step-Politur" data-en="One-step polish">One-Step-Politur</h3><p data-de="Mehr Glanz und Reduzierung leichter Waschspuren." data-en="More gloss and reduction of light wash marks.">Mehr Glanz und Reduzierung leichter Waschspuren.</p></article>
+        <article class="mini-service reveal"><img class="mini-service-photo" src="assets/two-step-correction.jpg?v=20260719-individual" alt="Professionelle zweistufige Lackkorrektur"><span>✦</span><h3 data-de="Two-Step-Lackkorrektur" data-en="Two-step paint correction">Two-Step-Lackkorrektur</h3><p data-de="Intensivere Korrektur nach vorheriger Lackprüfung." data-en="More intensive correction after paint inspection.">Intensivere Korrektur nach vorheriger Lackprüfung.</p></article>
+        <article class="mini-service reveal"><img class="mini-service-photo" src="assets/ceramic-protection.jpg?v=20260719-individual" alt="Wasserabweisender Keramikschutz auf schwarzem Lack"><span>✦</span><h3 data-de="Keramik-Sprühversiegelung" data-en="Ceramic spray protection">Keramik-Sprühversiegelung</h3><p data-de="Zusätzlicher Schutz und leichter zu pflegende Oberflächen." data-en="Added protection and easier maintenance.">Zusätzlicher Schutz und leichter zu pflegende Oberflächen.</p></article>
+        <article class="mini-service reveal"><img class="mini-service-photo" src="assets/leather-care.jpg?v=20260719-individual" alt="Professionelle Lederreinigung und Pflege"><span>✦</span><h3 data-de="Kunststoff- & Lederauffrischung" data-en="Trim & leather restoration">Kunststoff- &amp; Lederauffrischung</h3><p data-de="Pflege und optische Auffrischung beanspruchter Flächen." data-en="Care and visual refresh for worn surfaces.">Pflege und optische Auffrischung beanspruchter Flächen.</p></article>
+        <article class="mini-service reveal"><img class="mini-service-photo" src="assets/child-seat.jpg?v=20260719-individual" alt="Professionelle Reinigung eines Kindersitzes"><span>✦</span><h3 data-de="Kindersitz-Reinigung" data-en="Child seat cleaning">Kindersitz-Reinigung</h3><p data-de="Separate Reinigung nach Herstellerhinweisen." data-en="Separate cleaning following manufacturer guidance.">Separate Reinigung nach Herstellerhinweisen.</p></article>
+        <article class="mini-service reveal"><img class="mini-service-photo" src="assets/fleet-dealer.jpg?v=20260719-individual" alt="Gepflegte Flotten- und Händlerfahrzeuge"><span>✦</span><h3 data-de="Flotten & Händler" data-en="Fleet & dealer vehicles">Flotten &amp; Händler</h3><p data-de="Individuelle Pakete für mehrere Fahrzeuge und Verkaufsaufbereitung." data-en="Custom packages for multiple vehicles and sales preparation.">Individuelle Pakete für mehrere Fahrzeuge und Verkaufsaufbereitung.</p></article>
+      </div>
+    </section>
+
+    <section class="service-area-showcase" id="service-area">
+      <div class="service-area-copy reveal">
+        <p class="eyebrow" data-de="Unser Servicegebiet" data-en="Our service area">Unser Servicegebiet</p>
+        <h2 data-de="Wir kommen zu Ihnen – im Umkreis von bis zu 200 km." data-en="We come to you – within a radius of up to 200 km.">Wir kommen zu Ihnen – im Umkreis von bis zu 200 km.</h2>
+        <p data-de="Von unserem Standort in Schwandorf aus bieten wir professionelle mobile Fahrzeugaufbereitung in einem Umkreis von bis zu 200 km an. Termine außerhalb des Kerngebiets prüfen wir individuell." data-en="From our base in Schwandorf, we provide professional mobile vehicle detailing within a radius of up to 200 km. Requests outside the core area are reviewed individually.">Von unserem Standort in Schwandorf aus bieten wir professionelle mobile Fahrzeugaufbereitung in einem Umkreis von bis zu 200 km an. Termine außerhalb des Kerngebiets prüfen wir individuell.</p>
+
+        <div class="service-area-points">
+          <div>
+            <strong data-de="Zentral in Schwandorf" data-en="Based in Schwandorf">Zentral in Schwandorf</strong>
+            <span data-de="Flexible Termine in der gesamten Region." data-en="Flexible appointments throughout the region.">Flexible Termine in der gesamten Region.</span>
+          </div>
+          <div>
+            <strong data-de="Bis zu 200 km Radius" data-en="Up to 200 km radius">Bis zu 200 km Radius</strong>
+            <span data-de="Anfahrt in alle Richtungen nach Verfügbarkeit." data-en="Travel in every direction subject to availability.">Anfahrt in alle Richtungen nach Verfügbarkeit.</span>
+          </div>
+          <div>
+            <strong data-de="Transparente Anfahrt" data-en="Transparent travel costs">Transparente Anfahrt</strong>
+            <span data-de="Mögliche Anfahrtskosten werden vorab bestätigt." data-en="Any travel fee is confirmed in advance.">Mögliche Anfahrtskosten werden vorab bestätigt.</span>
+          </div>
+        </div>
+
+        <a class="button button-primary" href="#launch-notice" data-de="Noch nicht buchbar" data-en="Bookings not open">Noch nicht buchbar</a>
+      </div>
+
+      <div class="service-area-visual reveal">
+        <img src="assets/service-area-200km.jpg?v=20260719-final" alt="Patriot Detailing Servicegebiet mit 200 km Radius um Schwandorf">
+      </div>
+    </section>
+
+    <section class="section calculator-section" id="price-calculator">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-de="Preisrechner" data-en="Price calculator">Preisrechner</p>
+        <h2 data-de="Erhalten Sie sofort eine unverbindliche Preisspanne." data-en="Get an instant non-binding price range.">Erhalten Sie sofort eine unverbindliche Preisspanne.</h2>
+      </div>
+      <div class="calculator-card reveal">
+        <label><span data-de="Fahrzeuggröße" data-en="Vehicle size">Fahrzeuggröße</span>
+          <select id="calc-size"><option value="0" data-de="Kleinwagen" data-en="Small car">Kleinwagen</option><option value="15" data-de="Limousine / Kombi" data-en="Sedan / wagon">Limousine / Kombi</option><option value="30" data-de="SUV / Van" data-en="SUV / van">SUV / Van</option></select>
+        </label>
+        <label><span data-de="Paket" data-en="Package">Paket</span>
+          <select id="calc-package"><option value="40|60">Basic Interior Refresh</option><option value="80|100">Standard Interior Detail</option><option value="120|160">Premium Interior Detail</option><option value="180|260">Patriot’s Premium Detail</option></select>
+        </label>
+        <fieldset><legend data-de="Extras" data-en="Extras">Extras</legend>
+          <label><input class="calc-extra" type="checkbox" value="25|60"> <span data-de="Tierhaarentfernung" data-en="Pet hair removal">Tierhaarentfernung</span></label>
+          <label><input class="calc-extra" type="checkbox" value="20|50"> <span data-de="Geruchsbehandlung" data-en="Odor treatment">Geruchsbehandlung</span></label>
+          <label><input class="calc-extra" type="checkbox" value="80|180"> <span data-de="Politur / Buffing" data-en="Polishing / buffing">Politur / Buffing</span></label>
+          <label><input class="calc-extra" type="checkbox" value="25|50"> <span data-de="Scheinwerfer-Aufbereitung" data-en="Headlight restoration">Scheinwerfer-Aufbereitung</span></label>
+        </fieldset>
+        <div class="estimate"><span data-de="Geschätzte Preisspanne" data-en="Estimated price range">Geschätzte Preisspanne</span><strong id="estimate-price">40–60 €</strong><small data-de="Unverbindlich – der Endpreis wird nach Sichtung bestätigt." data-en="Non-binding – final price is confirmed after inspection.">Unverbindlich – der Endpreis wird nach Sichtung bestätigt.</small></div>
+        <a class="button button-primary" href="#launch-notice" data-de="Noch nicht buchbar" data-en="Bookings not open">Noch nicht buchbar</a>
+      </div>
+    </section>
+
+    <section class="section reviews-section" id="reviews">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-de="Kundenbewertungen" data-en="Customer reviews">Kundenbewertungen</p>
+        <h2 data-de="Unsere ersten Bewertungen folgen bald." data-en="Our first reviews are coming soon.">Unsere ersten Bewertungen folgen bald.</h2>
+      </div>
+      <div class="review-placeholder reveal">
+        <div class="stars">★★★★★</div>
+        <p data-de="Nach den ersten Aufträgen werden hier verifizierte Kundenstimmen und Google-Bewertungen angezeigt." data-en="After our first jobs, verified customer feedback and Google reviews will appear here.">Nach den ersten Aufträgen werden hier verifizierte Kundenstimmen und Google-Bewertungen angezeigt.</p>
+      </div>
+    </section>
+
+    <section class="dark-section" id="process">
+      <div class="section-heading light reveal">
+        <p class="eyebrow" data-de="So funktioniert es" data-en="How it works">So funktioniert es</p>
+        <h2 data-de="Einfach vom Angebot zum Ergebnis." data-en="Simple from quote to clean.">Einfach vom Angebot zum Ergebnis.</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step reveal"><span>1</span><h3 data-de="Anfrage senden" data-en="Send your details">Anfrage senden</h3><p data-de="Fahrzeug, Standort, Zustand und Wunschpaket angeben." data-en="Tell us your vehicle, location, condition and preferred package.">Fahrzeug, Standort, Zustand und Wunschpaket angeben.</p></div>
+        <div class="process-step reveal"><span>2</span><h3 data-de="Angebot erhalten" data-en="Receive your quote">Angebot erhalten</h3><p data-de="Wir bestätigen Umfang, Preis, Dauer und Terminoptionen." data-en="We confirm scope, price, duration and appointment options.">Wir bestätigen Umfang, Preis, Dauer und Terminoptionen.</p></div>
+        <div class="process-step reveal"><span>3</span><h3 data-de="Wir kommen zu Ihnen" data-en="We come to you">Wir kommen zu Ihnen</h3><p data-de="Zu Hause, am Arbeitsplatz oder an einem geeigneten Standort." data-en="At your home, workplace or another suitable location.">Zu Hause, am Arbeitsplatz oder an einem geeigneten Standort.</p></div>
+        <div class="process-step reveal"><span>4</span><h3 data-de="Qualitätskontrolle" data-en="Final inspection">Qualitätskontrolle</h3><p data-de="Gemeinsame Abnahme vor Abschluss des Auftrags." data-en="We review the finished vehicle with you before closing the service.">Gemeinsame Abnahme vor Abschluss des Auftrags.</p></div>
+      </div>
+    </section>
+
+    <section class="section split-section" id="about">
+      <div class="about-visual reveal"><img src="assets/patriot-detailing-owners.jpeg" alt="Patriot Detailing – Hunter Linke und Kenny Bell"></div>
+      <div class="about-copy reveal">
+        <p class="eyebrow" data-de="Über Patriot Detailing" data-en="About Patriot Detailing">Über Patriot Detailing</p>
+        <h2 data-de="Disziplin, Vertrauen und Stolz auf jedes Detail." data-en="Built on discipline, trust and pride in every detail.">Disziplin, Vertrauen und Stolz auf jedes Detail.</h2>
+        <p data-de="Patriot Detailing ist ein veteranengeführtes mobiles Detailing-Unternehmen von Hunter Linke und Kenny Bell. Unser Ziel: professionelle Fahrzeugpflege, klare Kommunikation und Ergebnisse, die man sieht und spürt." data-en="Patriot Detailing is a veteran-owned mobile detailing business run by Hunter Linke and Kenny Bell. Our goal is professional vehicle care, clear communication and results you can see and feel.">Patriot Detailing ist ein veteranengeführtes mobiles Detailing-Unternehmen von Hunter Linke und Kenny Bell. Unser Ziel: professionelle Fahrzeugpflege, klare Kommunikation und Ergebnisse, die man sieht und spürt.</p>
+        <div class="owner-lines">
+          <div><strong>Patriot Detailing</strong><span data-de="Veteranengeführt" data-en="Veteran owned">Veteranengeführt</span></div>
+          <div><strong>Hunter Linke &amp; Kenny Bell</strong><span data-de="Inhaber" data-en="Owners">Inhaber</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section results-section">
+      <div class="section-heading reveal"><p class="eyebrow" data-de="Warum Patriot Detailing?" data-en="Why choose Patriot Detailing?">Warum Patriot Detailing?</p><h2 data-de="Qualität, die man sieht." data-en="Quality you can see.">Qualität, die man sieht.</h2></div>
+      <div class="results-grid">
+        <article class="result-card reveal"><span>01</span><h3 data-de="Profi-Produkte" data-en="Professional products">Profi-Produkte</h3><p data-de="Ausgewählte Produkte und Werkzeuge für Fahrzeugoberflächen." data-en="Selected products and tools made for automotive surfaces.">Ausgewählte Produkte und Werkzeuge für Fahrzeugoberflächen.</p></article>
+        <article class="result-card reveal"><span>02</span><h3 data-de="Ehrliche Preise" data-en="Honest pricing">Ehrliche Preise</h3><p data-de="Leistung und Preis werden vor Arbeitsbeginn bestätigt." data-en="Scope and price are confirmed before work begins.">Leistung und Preis werden vor Arbeitsbeginn bestätigt.</p></article>
+        <article class="result-card reveal"><span>03</span><h3 data-de="Liebe zum Detail" data-en="Attention to detail">Liebe zum Detail</h3><p data-de="Wir arbeiten sorgfältig statt auf möglichst viel Durchsatz." data-en="We work carefully instead of rushing for volume.">Wir arbeiten sorgfältig statt auf möglichst viel Durchsatz.</p></article>
+        <article class="result-card reveal"><span>04</span><h3 data-de="Kundenzufriedenheit" data-en="Satisfaction focused">Kundenzufriedenheit</h3><p data-de="Jeder Auftrag endet mit einer gemeinsamen Qualitätskontrolle." data-en="Every job ends with a shared quality inspection.">Jeder Auftrag endet mit einer gemeinsamen Qualitätskontrolle.</p></article>
+      </div>
+    </section>
+
+    <section class="faq-section section" id="faq">
+      <div class="section-heading reveal"><p class="eyebrow">FAQ</p><h2 data-de="Vor Ihrem Termin." data-en="Before your appointment.">Vor Ihrem Termin.</h2></div>
+      <div class="faq-list">
+        <details class="reveal"><summary data-de="Welches Gebiet bedienen Sie?" data-en="What areas do you serve?">Welches Gebiet bedienen Sie?</summary><p data-de="Unser mobiles Servicegebiet reicht von Schwandorf bis Bayreuth und über eine vergleichbare Entfernung in alle Richtungen. Für längere Anfahrten kann ein Zuschlag gelten." data-en="Our mobile service area runs from Schwandorf to Bayreuth and a comparable distance in every direction. A travel fee may apply for longer distances.">Unser mobiles Servicegebiet reicht von Schwandorf bis Bayreuth und über eine vergleichbare Entfernung in alle Richtungen. Für längere Anfahrten kann ein Zuschlag gelten.</p></details>
+        <details class="reveal"><summary data-de="Brauchen Sie Wasser oder Strom?" data-en="Do you need water or electricity?">Brauchen Sie Wasser oder Strom?</summary><p data-de="Das hängt vom gewählten Paket und unserer mobilen Ausrüstung ab. Wir bestätigen alle Anforderungen vor dem Termin." data-en="This depends on the package and our mobile equipment. We confirm all requirements before the appointment.">Das hängt vom gewählten Paket und unserer mobilen Ausrüstung ab. Wir bestätigen alle Anforderungen vor dem Termin.</p></details>
+        <details class="reveal"><summary data-de="Wie lange dauert eine Aufbereitung?" data-en="How long does a detail take?">Wie lange dauert eine Aufbereitung?</summary><p data-de="Je nach Fahrzeug und Zustand zwischen etwa 1,5 Stunden und einem Großteil des Tages. Eine Zeitschätzung erhalten Sie mit dem Angebot." data-en="Depending on the vehicle and condition, from around 1.5 hours to most of a day. Your quote includes a time estimate.">Je nach Fahrzeug und Zustand zwischen etwa 1,5 Stunden und einem Großteil des Tages. Eine Zeitschätzung erhalten Sie mit dem Angebot.</p></details>
+        <details class="reveal"><summary data-de="Können alle Flecken und Gerüche entfernt werden?" data-en="Can every stain and odor be removed?">Können alle Flecken und Gerüche entfernt werden?</summary><p data-de="Wir arbeiten mit professionellen Methoden, können aber permanente Schäden oder tief eingezogene Gerüche nicht immer vollständig beseitigen. Wir kommunizieren realistische Erwartungen." data-en="We use professional methods, but permanent damage or deeply embedded odors cannot always be removed completely. We communicate realistic expectations.">Wir arbeiten mit professionellen Methoden, können aber permanente Schäden oder tief eingezogene Gerüche nicht immer vollständig beseitigen. Wir kommunizieren realistische Erwartungen.</p></details>
+      </div>
+    </section>
+
+    <section class="booking-section" id="booking">
+      <div class="booking-copy reveal">
+        <p class="eyebrow" data-de="Buchungen öffnen bald" data-en="Bookings opening soon">Buchungen öffnen bald</p>
+        <h2 data-de="Erzählen Sie uns von Ihrem Fahrzeug." data-en="Tell us about your vehicle.">Erzählen Sie uns von Ihrem Fahrzeug.</h2>
+        <p data-de="Nutzen Sie das Formular, E-Mail, Telefon oder WhatsApp. Wir bestätigen Paket, Preis und Termin persönlich." data-en="Use the form, email, phone or WhatsApp. We personally confirm your package, price and appointment.">Nutzen Sie das Formular, E-Mail, Telefon oder WhatsApp. Wir bestätigen Paket, Preis und Termin persönlich.</p>
+        <div class="contact-box">
+          <p><span data-de="Telefon / WhatsApp" data-en="Phone / WhatsApp">Telefon / WhatsApp</span><strong>+49 1512 9838342</strong></p>
+          <p><span>E-Mail</span><strong>patriotdetailing@kennybell.de</strong></p>
+          <p><span data-de="Servicegebiet" data-en="Service area">Servicegebiet</span><strong data-de="Schwandorf–Bayreuth & vergleichbare Entfernung" data-en="Schwandorf–Bayreuth & comparable distance">Schwandorf–Bayreuth &amp; vergleichbare Entfernung</strong></p>
+        </div>
+        <div class="quick-contact">
+          <a class="button button-primary" href="mailto:patriotdetailing@kennybell.de" data-de="E-Mail senden" data-en="Send email">E-Mail senden</a>
+          <a class="button button-secondary" href="https://wa.me/4915129838342" target="_blank" rel="noopener" data-de="Per WhatsApp schreiben" data-en="Message us on WhatsApp">Per WhatsApp schreiben</a>
         </div>
       </div>
 
-      <div class="offer-preview" aria-label="Our four services">
-        <a href="#interior-refresh" class="offer-tile reveal"><span class="offer-icon">✦</span><strong>Interior Refresh</strong><small>Clean, polished maintenance care</small></a>
-        <a href="#full-detail" class="offer-tile reveal"><span class="offer-icon">◈</span><strong>Full Interior Detail</strong><small>Complete cabin restoration</small></a>
-        <a href="#ceramic" class="offer-tile reveal"><span class="offer-icon">⬡</span><strong>Ceramic Protection</strong><small>Long-lasting surface protection</small></a>
-        <a href="#addons" class="offer-tile reveal"><span class="offer-icon">◆</span><strong>Add-On Services</strong><small>Extra care tailored to your vehicle</small></a>
-      </div>
-    </section>
-
-    <section class="section intro" id="services">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Our services</p>
-        <h2>Professional care for every interior.</h2>
-        <p>Four clear service options, designed for routine maintenance, deep restoration, long-term protection, and special concerns.</p>
-      </div>
-    </section>
-
-    <section class="services-section" id="packages">
-      <article class="service-card reveal" id="interior-refresh">
-        <span class="number">01</span><h3>Interior Refresh</h3>
-        <p>A clean, polished reset for vehicles that receive regular care.</p>
-        <ul><li>Thorough vacuum</li><li>Dashboard and trim cleaning</li><li>Interior glass</li><li>Door jamb wipe-down</li><li>Finishing inspection</li></ul>
-        <span class="coming-soon">Pricing available at launch</span>
-      </article>
-      <article class="service-card featured reveal" id="full-detail">
-        <span class="badge">Most requested</span><span class="number">02</span><h3>Full Interior Detail</h3>
-        <p>A top-to-bottom deep clean designed to restore the cabin.</p>
-        <ul><li>Everything in Interior Refresh</li><li>Carpet and fabric extraction</li><li>Detailed crevice cleaning</li><li>Leather cleaning and conditioning</li><li>Odor-neutralizing treatment</li></ul>
-        <span class="coming-soon">Pricing available at launch</span>
-      </article>
-      <article class="service-card reveal" id="ceramic">
-        <span class="number">03</span><h3>Ceramic Protection</h3>
-        <p>Durable interior surface protection that makes ongoing care easier.</p>
-        <ul><li>Interior surface preparation</li><li>Fabric or leather protection options</li><li>UV and stain resistance support</li><li>High-touch surface treatment</li><li>Aftercare guidance</li></ul>
-        <span class="coming-soon">Pricing available at launch</span>
-      </article>
-      <article class="service-card reveal" id="addons">
-        <span class="number">04</span><h3>Add-On Services</h3>
-        <p>Targeted extras for challenging interiors and individual needs.</p>
-        <ul><li>Pet-hair removal</li><li>Heavy stain treatment</li><li>Smoke and odor treatment</li><li>Child-seat area cleaning</li><li>Pre-sale preparation</li></ul>
-        <span class="coming-soon">Pricing available at launch</span>
-      </article>
-    </section>
-
-    <section class="dark-section" id="about">
-      <div class="about-image reveal"><img src="patriot-detailing-owners.jpeg" alt="Patriot Detailing, founded by Hunter and Kenny"></div>
-      <div class="about-copy reveal"><p class="eyebrow">About Patriot Detailing</p><h2>Built on discipline, trust, and pride in the details.</h2><p>Patriot Detailing is a veteran-owned mobile detailing business founded by Hunter and Kenny. Our goal is to provide dependable, premium vehicle care with honest communication and consistent results.</p><div class="values"><span>Mobile service</span><span>Premium quality</span><span>Trusted &amp; reliable</span><span>Detail focused</span></div></div>
-    </section>
-
-    <section class="contact-section" id="contact">
-      <p class="eyebrow">Opening soon</p><h2>We are not booking appointments yet.</h2>
-      <p>This website is currently a preview. We are not accepting bookings, appointments, deposits, or paid work yet. Launch information and official contact details will be added before opening.</p>
-      <a class="button button-secondary-dark" href="mailto:info@patriotdetailing.de">General email</a>
+      <form class="quote-form reveal prelaunch-form" id="quote-form" aria-disabled="true">
+        <div class="form-closed-message" data-de="Buchungsanfragen sind noch nicht geöffnet." data-en="Booking requests are not open yet.">Buchungsanfragen sind noch nicht geöffnet.</div>
+        <fieldset disabled>
+        <div class="field-row">
+          <label><span data-de="Vorname" data-en="First name">Vorname</span><input type="text" name="firstName" autocomplete="given-name" required></label>
+          <label><span data-de="Nachname" data-en="Last name">Nachname</span><input type="text" name="lastName" autocomplete="family-name" required></label>
+        </div>
+        <div class="field-row">
+          <label><span>E-Mail</span><input type="email" name="email" autocomplete="email" required></label>
+          <label><span data-de="Telefon" data-en="Phone">Telefon</span><input type="tel" name="phone" autocomplete="tel" required></label>
+        </div>
+        <div class="field-row">
+          <label><span data-de="Fahrzeug" data-en="Vehicle">Fahrzeug</span><input type="text" name="vehicle" placeholder="z. B. BMW 3er" required></label>
+          <label><span data-de="Ort / PLZ" data-en="City / postcode">Ort / PLZ</span><input type="text" name="location" placeholder="z. B. 92421 Schwandorf" required></label>
+        </div>
+        <div class="field-row">
+          <label><span data-de="Wunschtermin" data-en="Preferred date">Wunschtermin</span><input type="date" name="preferredDate"></label>
+          <label><span data-de="Wunschzeit" data-en="Preferred time">Wunschzeit</span><select name="preferredTime"><option data-de="Vormittag" data-en="Morning">Vormittag</option><option data-de="Nachmittag" data-en="Afternoon">Nachmittag</option><option data-de="Abend" data-en="Evening">Abend</option></select></label></div><div class="field-row"><label><span data-de="Bevorzugte Kontaktart" data-en="Preferred contact method">Bevorzugte Kontaktart</span><select name="contactMethod"><option>E-Mail</option><option>Telefon</option><option>WhatsApp</option></select></label><label><span data-de="Fahrzeuggröße" data-en="Vehicle size">Fahrzeuggröße</span><select name="vehicleSize"><option data-de="Kleinwagen" data-en="Small car">Kleinwagen</option><option data-de="Limousine / Kombi" data-en="Sedan / wagon">Limousine / Kombi</option><option data-de="SUV / Van" data-en="SUV / van">SUV / Van</option></select></label>
+        </div>
+        <label><span data-de="Leistung" data-en="Service">Leistung</span>
+          <select name="service" required>
+            <option value="" data-de="Bitte auswählen" data-en="Choose a service">Bitte auswählen</option>
+            <option>Basic Interior Refresh</option><option>Standard Interior Detail</option><option>Premium Interior Detail</option><option>Patriot’s Premium Detail</option><option data-de="Politur / Buffing" data-en="Polishing / buffing">Politur / Buffing</option><option data-de="Unsicher – bitte empfehlen" data-en="Not sure – please recommend">Unsicher – bitte empfehlen</option>
+          </select>
+        </label>
+        <label><span data-de="Fotos hochladen (optional)" data-en="Upload photos (optional)">Fotos hochladen (optional)</span><input type="file" name="photos" accept="image/*" multiple><small class="field-help" data-de="Die Bilder werden nicht automatisch per E-Mail angehängt. Bitte nach Absenden auf unsere Antwort warten oder direkt über WhatsApp senden." data-en="Photos are not automatically attached to the email. Please wait for our reply or send them directly by WhatsApp.">Die Bilder werden nicht automatisch per E-Mail angehängt. Bitte nach Absenden auf unsere Antwort warten oder direkt über WhatsApp senden.</small></label><label><span data-de="Zustand & gewünschte Arbeiten" data-en="Condition & requested work">Zustand &amp; gewünschte Arbeiten</span><textarea name="message" rows="5" placeholder="Flecken, Tierhaare, Gerüche, Fahrzeuggröße, Zusatzleistungen und bevorzugte Zeiten..." required></textarea></label>
+        <label class="checkbox"><input type="checkbox" required><span data-de="Ich stimme zu, dass Patriot Detailing mich zu dieser Anfrage kontaktieren darf." data-en="I agree that Patriot Detailing may contact me about this request.">Ich stimme zu, dass Patriot Detailing mich zu dieser Anfrage kontaktieren darf.</span></label>
+        <button class="button button-primary button-full" type="submit" data-de="Anfrage per E-Mail vorbereiten" data-en="Prepare email request">Anfrage per E-Mail vorbereiten</button>
+        <p class="form-message" id="form-message" role="status"></p>
+        </fieldset>
+      </form>
     </section>
   </main>
 
-  <footer><div><img src="patriot-detailing-logo.jpeg" alt="Patriot Detailing"><p>Premium mobile auto care in Bavaria.</p></div><div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div><div>© <span id="year"></span> Patriot Detailing</div></footer>
+  <div class="floating-actions">
+    <a href="tel:+4915129838342" aria-label="Anrufen">☎</a>
+    <a href="https://wa.me/4915129838342" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+    <a href="#launch-notice" aria-label="Buchen">✦</a>
+  </div>
+
+  <button class="assistant-toggle" id="assistant-toggle" type="button" aria-label="Detailing Assistent öffnen">?</button>
+  <aside class="assistant-panel" id="assistant-panel" aria-hidden="true">
+    <div class="assistant-head"><strong>Patriot Assistant</strong><button id="assistant-close" type="button">×</button></div>
+    <p data-de="Wählen Sie eine Frage:" data-en="Choose a question:">Wählen Sie eine Frage:</p>
+    <button class="assistant-question" data-answer-de="Bei leichter, regelmäßiger Pflege reicht meist Basic. Für Flecken, Gerüche oder Extraktion empfehlen wir Premium oder Patriot’s Premium." data-answer-en="For light regular upkeep, Basic is usually enough. For stains, odors or extraction, choose Premium or Patriot’s Premium.">Welches Paket brauche ich?</button>
+    <button class="assistant-question" data-answer-de="Ja. Tierhaarentfernung ist als Zusatzleistung und im Patriot’s Premium Detail verfügbar." data-answer-en="Yes. Pet hair removal is available as an add-on and in Patriot’s Premium Detail.">Entfernt ihr Tierhaare?</button>
+    <button class="assistant-question" data-answer-de="Wir behandeln Rauch- und andere Gerüche professionell. Vollständige Entfernung kann bei tief eingezogenen Gerüchen nicht garantiert werden." data-answer-en="We professionally treat smoke and other odors. Complete removal cannot be guaranteed for deeply embedded odors.">Entfernt ihr Rauchgeruch?</button>
+    <button class="assistant-question" data-answer-de="Je nach Paket und Zustand dauert die Arbeit etwa 1,5 bis 8 Stunden." data-answer-en="Depending on package and condition, service usually takes around 1.5 to 8 hours.">Wie lange dauert es?</button>
+    <div class="assistant-answer" id="assistant-answer"></div>
+    <a class="button button-primary button-full" href="#launch-notice" data-de="Noch nicht buchbar" data-en="Bookings not open">Noch nicht buchbar</a>
+  </aside>
+
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand"><img src="assets/patriot-detailing-logo.jpeg" alt="Patriot Detailing"><p data-de="Veteranengeführte mobile Fahrzeugaufbereitung von Hunter Linke und Kenny Bell." data-en="Veteran-owned mobile vehicle detailing by Hunter Linke and Kenny Bell.">Veteranengeführte mobile Fahrzeugaufbereitung von Hunter Linke und Kenny Bell.</p></div>
+      <div><h3 data-de="Navigation" data-en="Explore">Navigation</h3><a href="#services" data-de="Leistungen" data-en="Services">Leistungen</a><a href="#add-ons" data-de="Zusatzleistungen" data-en="Add-ons">Zusatzleistungen</a><a href="#about" data-de="Über uns" data-en="About">Über uns</a><a href="#launch-notice" data-de="Start-Hinweis" data-en="Launch notice">Start-Hinweis</a></div>
+      <div><h3 data-de="Rechtliches" data-en="Legal">Rechtliches</h3><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+      <div><h3 data-de="Kontakt" data-en="Contact">Kontakt</h3><a href="tel:+4915129838342">+49 1512 9838342</a><a href="mailto:patriotdetailing@kennybell.de">patriotdetailing@kennybell.de</a><span>Schwandorf, Bayern</span><span class="social-coming" data-de="Instagram • Facebook • TikTok – folgen bald" data-en="Instagram • Facebook • TikTok – coming soon">Instagram • Facebook • TikTok – folgen bald</span></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Patriot Detailing.</span><a href="#top" data-de="Nach oben ↑" data-en="Back to top ↑">Nach oben ↑</a></div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
