@@ -1,306 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Patriot Detailing — professional mobile vehicle interior detailing in Bavaria, Germany. Veteran owned by Hunter and Kenny." />
-  <meta name="theme-color" content="#050505" />
-  <title>Patriot Detailing | Professional Mobile Car Detailing</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Patriot Detailing — premium mobile interior detailing in Bavaria. Preview website; appointments are not yet being accepted.">
+  <meta name="theme-color" content="#070707">
+  <title>Patriot Detailing | Premium Mobile Car Detailing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="approved-home" id="top" aria-label="Patriot Detailing home screen">
-    <img class="approved-home-image" src="patriot-premium-home.png" alt="Patriot Detailing — premium detailing at your doorstep">
-    <a class="approved-hotspot approved-home-link" href="#top" aria-label="Home"></a>
-    <a class="approved-hotspot approved-services-link" href="#services" aria-label="View services"></a>
-    <a class="approved-hotspot approved-packages-link" href="#services" aria-label="View packages"></a>
-    <a class="approved-hotspot approved-about-link" href="#about" aria-label="About us"></a>
-    <a class="approved-hotspot approved-contact-link" href="#booking" aria-label="Contact"></a>
-    <a class="approved-hotspot approved-quote-link" href="#booking" aria-label="Request a quote"></a>
-    <a class="approved-hotspot approved-view-services-link" href="#services" aria-label="View services"></a>
+  <div class="launch-banner">
+    <strong>Preview — not yet open</strong>
+    <span>We are not booking appointments yet. This website is available as a preview while we prepare for launch.</span>
+  </div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Patriot Detailing home">
+      <img src="patriot-detailing-logo.jpeg" alt="Patriot Detailing — Premium Auto Care">
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav id="main-nav" class="main-nav">
+      <a class="active" href="#top">Home</a>
+      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+      <span class="nav-status">Not booking yet</span>
+    </nav>
   </header>
 
   <main>
-    <section class="service-strip" aria-label="Service highlights">
-      <span>Deep interior cleaning</span>
-      <span>Seat and carpet extraction</span>
-      <span>Leather care</span>
-      <span>Odor treatment</span>
-      <span>Maintenance details</span>
+    <section class="hero">
+      <div class="hero-shade"></div>
+      <div class="hero-content reveal">
+        <img class="hero-logo" src="patriot-detailing-logo.jpeg" alt="Patriot Detailing logo">
+        <h1>Premium detailing<br>at <span>your</span> doorstep</h1>
+        <p>Professional care. Flawless results. Mobile interior detailing built around quality, trust, and attention to every detail.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#services">View services</a>
+          <span class="button button-disabled" aria-disabled="true">Not booking appointments yet</span>
+        </div>
+      </div>
+
+      <div class="offer-preview" aria-label="Our four services">
+        <a href="#interior-refresh" class="offer-tile reveal"><span class="offer-icon">✦</span><strong>Interior Refresh</strong><small>Clean, polished maintenance care</small></a>
+        <a href="#full-detail" class="offer-tile reveal"><span class="offer-icon">◈</span><strong>Full Interior Detail</strong><small>Complete cabin restoration</small></a>
+        <a href="#ceramic" class="offer-tile reveal"><span class="offer-icon">⬡</span><strong>Ceramic Protection</strong><small>Long-lasting surface protection</small></a>
+        <a href="#addons" class="offer-tile reveal"><span class="offer-icon">◆</span><strong>Add-On Services</strong><small>Extra care tailored to your vehicle</small></a>
+      </div>
     </section>
 
-    <section class="section" id="services">
+    <section class="section intro" id="services">
       <div class="section-heading reveal">
         <p class="eyebrow">Our services</p>
         <h2>Professional care for every interior.</h2>
-        <p>Choose a maintenance clean or a complete reset. Final quotes depend on vehicle size, condition, and selected add-ons.</p>
-      </div>
-
-      <div class="services-grid">
-        <article class="service-card reveal">
-          <span class="service-number">01</span>
-          <h3>Interior Refresh</h3>
-          <p>A clean, polished reset for vehicles that receive regular care.</p>
-          <ul>
-            <li>Thorough vacuum</li>
-            <li>Dashboard and trim cleaning</li>
-            <li>Interior glass</li>
-            <li>Door jamb wipe-down</li>
-            <li>Finishing inspection</li>
-          </ul>
-          <a href="#booking">Request pricing <span>→</span></a>
-        </article>
-
-        <article class="service-card featured reveal">
-          <div class="popular">Most requested</div>
-          <span class="service-number">02</span>
-          <h3>Full Interior Detail</h3>
-          <p>A top-to-bottom deep clean designed to restore the cabin.</p>
-          <ul>
-            <li>Everything in Interior Refresh</li>
-            <li>Carpet and fabric extraction</li>
-            <li>Detailed crevice cleaning</li>
-            <li>Leather cleaning and conditioning</li>
-            <li>Odor-neutralizing treatment</li>
-          </ul>
-          <a href="#booking">Request pricing <span>→</span></a>
-        </article>
-
-        <article class="service-card reveal">
-          <span class="service-number">03</span>
-          <h3>Specialty Treatment</h3>
-          <p>Targeted service for challenging interiors and specific concerns.</p>
-          <ul>
-            <li>Pet-hair removal</li>
-            <li>Heavy stain treatment</li>
-            <li>Smoke or odor treatment</li>
-            <li>Child-seat area cleaning</li>
-            <li>Pre-sale vehicle preparation</li>
-          </ul>
-          <a href="#booking">Request pricing <span>→</span></a>
-        </article>
-      </div>
-
-      <div class="legal-service-note reveal">
-        <strong>Exterior-service note:</strong>
-        Mobile exterior washing is offered only at locations where wastewater collection and local regulations permit it,
-        or through an approved wash-site arrangement. This protects the environment and keeps every service compliant.
+        <p>Four clear service options, designed for routine maintenance, deep restoration, long-term protection, and special concerns.</p>
       </div>
     </section>
 
-    <section class="dark-section" id="process">
-      <div class="section-heading light reveal">
-        <p class="eyebrow">How it works</p>
-        <h2>Simple from quote to clean.</h2>
-      </div>
-
-      <div class="process-grid">
-        <div class="process-step reveal">
-          <span>1</span>
-          <h3>Send your details</h3>
-          <p>Tell us your vehicle type, location, condition, and preferred service.</p>
-        </div>
-        <div class="process-step reveal">
-          <span>2</span>
-          <h3>Receive your quote</h3>
-          <p>We confirm the scope, price, expected duration, and available appointment times.</p>
-        </div>
-        <div class="process-step reveal">
-          <span>3</span>
-          <h3>We come to you</h3>
-          <p>We arrive prepared and complete the work at your home, workplace, or approved location.</p>
-        </div>
-        <div class="process-step reveal">
-          <span>4</span>
-          <h3>Final inspection</h3>
-          <p>We review the finished vehicle with you before closing out the service.</p>
-        </div>
-      </div>
+    <section class="services-section" id="packages">
+      <article class="service-card reveal" id="interior-refresh">
+        <span class="number">01</span><h3>Interior Refresh</h3>
+        <p>A clean, polished reset for vehicles that receive regular care.</p>
+        <ul><li>Thorough vacuum</li><li>Dashboard and trim cleaning</li><li>Interior glass</li><li>Door jamb wipe-down</li><li>Finishing inspection</li></ul>
+        <span class="coming-soon">Pricing available at launch</span>
+      </article>
+      <article class="service-card featured reveal" id="full-detail">
+        <span class="badge">Most requested</span><span class="number">02</span><h3>Full Interior Detail</h3>
+        <p>A top-to-bottom deep clean designed to restore the cabin.</p>
+        <ul><li>Everything in Interior Refresh</li><li>Carpet and fabric extraction</li><li>Detailed crevice cleaning</li><li>Leather cleaning and conditioning</li><li>Odor-neutralizing treatment</li></ul>
+        <span class="coming-soon">Pricing available at launch</span>
+      </article>
+      <article class="service-card reveal" id="ceramic">
+        <span class="number">03</span><h3>Ceramic Protection</h3>
+        <p>Durable interior surface protection that makes ongoing care easier.</p>
+        <ul><li>Interior surface preparation</li><li>Fabric or leather protection options</li><li>UV and stain resistance support</li><li>High-touch surface treatment</li><li>Aftercare guidance</li></ul>
+        <span class="coming-soon">Pricing available at launch</span>
+      </article>
+      <article class="service-card reveal" id="addons">
+        <span class="number">04</span><h3>Add-On Services</h3>
+        <p>Targeted extras for challenging interiors and individual needs.</p>
+        <ul><li>Pet-hair removal</li><li>Heavy stain treatment</li><li>Smoke and odor treatment</li><li>Child-seat area cleaning</li><li>Pre-sale preparation</li></ul>
+        <span class="coming-soon">Pricing available at launch</span>
+      </article>
     </section>
 
-    <section class="section split-section" id="about">
-      <div class="about-visual reveal">
-        <img src="patriot-detailing-owners.jpeg" alt="Patriot Detailing, Hunter and Kenny">
-      </div>
-      <div class="about-copy reveal">
-        <p class="eyebrow">About Patriot Detailing</p>
-        <h2>Built on discipline, trust, and pride in the details.</h2>
-        <p>
-          Patriot Detailing is a veteran-owned mobile detailing business founded by Hunter and Kenny.
-          Our goal is straightforward: provide dependable, professional vehicle care and treat every customer’s car with respect.
-        </p>
-        <p>
-          We focus on clear communication, careful workmanship, and consistent results—not rushed volume.
-          Whether your vehicle needs a routine refresh or a serious interior restoration, we build the service around its actual condition.
-        </p>
-        <div class="values">
-          <div><strong>Reliable</strong><span>Clear arrival windows and communication</span></div>
-          <div><strong>Professional</strong><span>Purpose-built tools and processes</span></div>
-          <div><strong>Respectful</strong><span>Your vehicle and property are protected</span></div>
-        </div>
-      </div>
+    <section class="dark-section" id="about">
+      <div class="about-image reveal"><img src="patriot-detailing-owners.jpeg" alt="Patriot Detailing, founded by Hunter and Kenny"></div>
+      <div class="about-copy reveal"><p class="eyebrow">About Patriot Detailing</p><h2>Built on discipline, trust, and pride in the details.</h2><p>Patriot Detailing is a veteran-owned mobile detailing business founded by Hunter and Kenny. Our goal is to provide dependable, premium vehicle care with honest communication and consistent results.</p><div class="values"><span>Mobile service</span><span>Premium quality</span><span>Trusted &amp; reliable</span><span>Detail focused</span></div></div>
     </section>
 
-    <section class="section results-section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">The Patriot standard</p>
-        <h2>What customers can expect.</h2>
-      </div>
-      <div class="results-grid">
-        <article class="result-card reveal">
-          <span>01</span>
-          <h3>No surprise pricing</h3>
-          <p>The service scope and price are confirmed before work begins.</p>
-        </article>
-        <article class="result-card reveal">
-          <span>02</span>
-          <h3>Professional equipment</h3>
-          <p>We use dedicated tools and products selected for automotive interiors.</p>
-        </article>
-        <article class="result-card reveal">
-          <span>03</span>
-          <h3>Condition-based service</h3>
-          <p>Every quote reflects the vehicle’s size, condition, and actual workload.</p>
-        </article>
-        <article class="result-card reveal">
-          <span>04</span>
-          <h3>Final quality check</h3>
-          <p>Every job receives a final inspection before handover.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="faq-section section" id="faq">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Frequently asked questions</p>
-        <h2>Before your appointment.</h2>
-      </div>
-
-      <div class="faq-list">
-        <details class="reveal">
-          <summary>What areas do you serve?</summary>
-          <p>Patriot Detailing is designed to serve customers in and around Schwandorf and surrounding parts of Bavaria. Replace this text with your final service radius.</p>
-        </details>
-        <details class="reveal">
-          <summary>Do I need to provide water or electricity?</summary>
-          <p>Appointment requirements depend on the selected service and equipment setup. We confirm access needs when approving your quote.</p>
-        </details>
-        <details class="reveal">
-          <summary>How long does a detail take?</summary>
-          <p>A maintenance service may take a few hours, while heavily soiled interiors can require longer. Your estimate will be included with the quote.</p>
-        </details>
-        <details class="reveal">
-          <summary>Can you remove every stain or odor?</summary>
-          <p>We use professional methods, but some permanent damage, dye transfer, or deeply embedded odors may not be completely removable. We set realistic expectations before beginning.</p>
-        </details>
-        <details class="reveal">
-          <summary>Do you wash vehicle exteriors at the customer’s home?</summary>
-          <p>Only where local rules, drainage conditions, and wastewater controls allow it. Otherwise, exterior work must be completed at an approved location.</p>
-        </details>
-      </div>
-    </section>
-
-    <section class="booking-section" id="booking">
-      <div class="booking-copy reveal">
-        <p class="eyebrow">Request a quote</p>
-        <h2>Tell us about your vehicle.</h2>
-        <p>Complete the form and we will contact you to confirm the service, price, and appointment options.</p>
-        <div class="contact-box">
-          <p><span>Phone</span><strong>+49 XXX XXXXXXX</strong></p>
-          <p><span>Email</span><strong>booking@patriot-detailing.de</strong></p>
-          <p><span>Service area</span><strong>Schwandorf &amp; surrounding Bavaria</strong></p>
-        </div>
-      </div>
-
-      <form class="quote-form reveal" id="quote-form">
-        <div class="field-row">
-          <label>
-            First name
-            <input type="text" name="firstName" autocomplete="given-name" required>
-          </label>
-          <label>
-            Last name
-            <input type="text" name="lastName" autocomplete="family-name" required>
-          </label>
-        </div>
-        <div class="field-row">
-          <label>
-            Email
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
-          <label>
-            Phone
-            <input type="tel" name="phone" autocomplete="tel" required>
-          </label>
-        </div>
-        <div class="field-row">
-          <label>
-            Vehicle
-            <input type="text" name="vehicle" placeholder="Example: BMW 3 Series" required>
-          </label>
-          <label>
-            Location
-            <input type="text" name="location" placeholder="City or postcode" required>
-          </label>
-        </div>
-        <label>
-          Service
-          <select name="service" required>
-            <option value="">Choose a service</option>
-            <option>Interior Refresh</option>
-            <option>Full Interior Detail</option>
-            <option>Specialty Treatment</option>
-            <option>Not sure — recommend one</option>
-          </select>
-        </label>
-        <label>
-          Vehicle condition and requested work
-          <textarea name="message" rows="5" placeholder="Tell us about stains, pet hair, odors, vehicle size, and preferred appointment days." required></textarea>
-        </label>
-        <label class="checkbox">
-          <input type="checkbox" required>
-          <span>I agree that Patriot Detailing may contact me about this quote request.</span>
-        </label>
-        <button class="button button-primary button-full" type="submit">Submit quote request</button>
-        <p class="form-message" id="form-message" role="status"></p>
-      </form>
+    <section class="contact-section" id="contact">
+      <p class="eyebrow">Opening soon</p><h2>We are not booking appointments yet.</h2>
+      <p>Patriot Detailing is preparing for launch. You can explore our services now, but appointment booking will remain unavailable until we officially open.</p>
+      <a class="button button-secondary-dark" href="mailto:info@patriotdetailing.de">General email</a>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-main">
-      <div class="footer-brand">
-        <img src="patriot-detailing-logo.jpeg" alt="Patriot Detailing">
-        <p>Veteran-owned mobile vehicle detailing by Hunter and Kenny.</p>
-      </div>
-      <div>
-        <h3>Explore</h3>
-        <a href="#services">Services</a>
-        <a href="#process">How it works</a>
-        <a href="#about">About</a>
-        <a href="#booking">Request a quote</a>
-      </div>
-      <div>
-        <h3>Legal</h3>
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </div>
-      <div>
-        <h3>Contact</h3>
-        <a href="tel:+49XXXXXXXXXX">+49 XXX XXXXXXX</a>
-        <a href="mailto:booking@patriot-detailing.de">booking@patriot-detailing.de</a>
-        <span>Schwandorf, Bavaria</span>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span id="year"></span> Patriot Detailing. All rights reserved.</span>
-      <a href="#top">Back to top ↑</a>
-    </div>
-  </footer>
-
+  <footer><div><img src="patriot-detailing-logo.jpeg" alt="Patriot Detailing"><p>Premium mobile auto care in Bavaria.</p></div><div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div><div>© <span id="year"></span> Patriot Detailing</div></footer>
   <script src="script.js"></script>
 </body>
 </html>
